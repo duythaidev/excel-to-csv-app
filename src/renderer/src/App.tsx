@@ -58,18 +58,23 @@ function App(): JSX.Element {
 
   const downloadSingle = async (sheetName: string) => {
     const data = sheetData[sheetName]
-    if (!data) return
+    if (!data || data.length === 0) return
 
     setExportingSheet(sheetName)
 
+    // Lấy header từ hàng đầu tiên
+    const headers = data[0]
+
     const csvContent = stringify(data, {
-      header: true,
       quoted: true,
-      delimiter: ','
+      delimiter: ',',
+      columns: headers
     })
 
     const BOM = '\uFEFF'
-    const blob = new Blob([BOM + csvContent], { type: 'text/csv;charset=utf-8;' })
+    const blob = new Blob([BOM + csvContent], {
+      type: 'text/csv;charset=utf-8;'
+    })
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
     link.href = url
