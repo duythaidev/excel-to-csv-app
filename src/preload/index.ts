@@ -7,7 +7,7 @@ const api = {
   openFileDialog: () => ipcRenderer.invoke('open-file-dialog'),
   openFolderDialog: () => ipcRenderer.invoke('open-folder-dialog'),
   readExcel: (filePath: string) => ipcRenderer.invoke('read-excel', filePath),
-  writeFile: (path, content) => fs.writeFileSync(path, content, 'utf8')
+  writeFile: (path: string, content: string) => fs.writeFileSync(path, content, 'utf8')
 }
 
 // Use `contextBridge` APIs to expose Electron APIs to
