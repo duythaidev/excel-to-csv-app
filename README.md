@@ -1,10 +1,8 @@
-# my-excel-csv
+# App chuyển từ xlsx -> csv
+
+Download app (windows/linux): [https://drive.google.com/drive/folders/1zJBClv4vQ2yFvczuIJcPgUYUeTbTlxVT?usp=sharing](https://drive.google.com/drive/folders/1zJBClv4vQ2yFvczuIJcPgUYUeTbTlxVT?usp=sharing)
 
 An Electron application with React and TypeScript
-
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ## Project Setup
 
